@@ -1,5 +1,7 @@
 package com.example.oopkotlin.ui.screens
 
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.compose.runtime.collectAsState
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -15,6 +17,7 @@ import androidx.navigation.NavHostController
 import com.example.oopkotlin.models.Product
 import com.example.oopkotlin.navigation.Screen
 import com.example.oopkotlin.ui.components.ProductListItem
+
 
 /**
  * Composable que usa LazyColumn para organizar y mostrar todos los ítems.
@@ -33,7 +36,6 @@ fun ProductListScreen(navController: NavHostController, products: List<Product>)
         }
     ) { padding ->
         // LazyColumn: Es la clave para listas eficientes. Solo renderiza los ítems visibles.
-        //
         LazyColumn(
             contentPadding = padding, // Aplica el padding necesario de la TopAppBar
             modifier = Modifier.fillMaxSize()

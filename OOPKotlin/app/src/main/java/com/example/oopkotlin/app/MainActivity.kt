@@ -1,4 +1,4 @@
-package com.example.oopkotlin
+package com.example.oopkotlin.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
                         arguments = listOf(
                             navArgument("productId") {
                                 type =
-                                    NavType.IntType // Especificamos que el argumento es de tipo entero
+                                    NavType.Companion.IntType // Especificamos que el argumento es de tipo entero
                             }
                         )
                     ) { backStackEntry ->
