@@ -30,6 +30,21 @@ object ProductRepo {
                 5, "Flamma FC05 Multi Modulation", "Pedal de efectos digital",
                 "Efectos de multimodulación digital. Con 11 algoritmos diferentes. Fuente de alimentación: 9 V, 130 mA. Acabado metalico verde lima.",
                 34.29, R.drawable.flamma
+            ),
+            Product(
+                6, "Johannus Premium Vivaldi 360, Light Oak Concave", "Órgano litúrgico",
+                "Órgano litúrgico con 41 registros, tres teclados de 61 teclas, teclado de alta calidad con escape, diseño con caja de resonancia abierta, sistema de audio 10.1, cuatro posiciones de escucha seleccionables (por ejemplo, banco del órgano y nave), dos pedales de expresión de madera, seis acopladores, tres trémolos y atril de madera.",
+                17990.20, R.drawable.organo
+            ),
+            Product(
+                7, "Alpengold Stubach Nature G/C/F/Bb", "Acordeón diatónico",
+                "Acordeón diatónico de cuatro filas, 46 teclas agudas, tres rangos de lengüetas en el lado agudo, 16 teclas de bajo, X-Bass y placas de lengüeta Super Dural.",
+                5099.90, R.drawable.acordeon
+            ),
+            Product(
+                8, "Thomann AC Triple e Ocarina", "Ocarina triple",
+                "Ocarina triple, pieza única fabricada a mano, modelo AC Stein, afinación en Alto Do mayor, rango tonal de más de 2 octavas con 21 notas de La1 a Sol4, medidas de 15 × 10 cm, peso de 322 g, e incluye tabla de digitación y bolsa.",
+                298.30, R.drawable.ocarina
             )
 
             // añadir más productos aquí si hace falta

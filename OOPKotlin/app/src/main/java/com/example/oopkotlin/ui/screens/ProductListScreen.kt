@@ -1,8 +1,10 @@
 package com.example.oopkotlin.ui.screens
 
+import androidx.compose.foundation.layout.Box
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.runtime.collectAsState
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -13,6 +15,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.oopkotlin.models.Product
 import com.example.oopkotlin.navigation.Screen
@@ -22,7 +25,6 @@ import com.example.oopkotlin.ui.components.ProductListItem
 /**
  * Composable que usa LazyColumn para organizar y mostrar todos los ítems.
  */
-// ui/screens/ProductListScreen.kt
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProductListScreen(navController: NavHostController, products: List<Product>) {
@@ -42,10 +44,13 @@ fun ProductListScreen(navController: NavHostController, products: List<Product>)
         ) {
             // items(products): Genera un ítem por cada producto en la lista
             items(products, key = { it.id }) { product ->
+                // añado padding para que ocupe un poco mas de espacio en pantalla
+                Box(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)){
                 ProductListItem(product = product) { productId ->
                     // Acción de navegación al hacer clic
                     // Usa la función helper creada en Screens.kt para construir la ruta
                     navController.navigate(Screen.ProductDetail.createRoute(productId))
+                }
                 }
             }
         }
