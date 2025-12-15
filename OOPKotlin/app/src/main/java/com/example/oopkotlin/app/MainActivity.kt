@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -14,6 +17,8 @@ import com.example.oopkotlin.navigation.Screen
 import com.example.oopkotlin.ui.screens.ProductDetailScreen
 import com.example.oopkotlin.ui.screens.ProductListScreen
 import com.example.oopkotlin.ui.theme.OOPKotlinTheme
+import com.example.oopkotlin.viewmodel.ProductViewModel
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

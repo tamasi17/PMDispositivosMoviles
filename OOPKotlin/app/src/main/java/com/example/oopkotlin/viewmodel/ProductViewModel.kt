@@ -13,20 +13,20 @@ class ProductViewModel : ViewModel() {
 
     // 1. Estado Mutable (StateFlow)
     // Usamos StateFlow para exponer la lista de productos de manera reactiva.
-    // La IU (Compose) se "suscribirá" a este flujo de datos.
+    // La IU (Compose) se suscribirá a este flujo de datos.
     private val _products = MutableStateFlow<List<Product>>(emptyList())
     val products: StateFlow<List<Product>> = _products.asStateFlow()
 
     // 2. Inicialización
     init {
-        // En un caso real, aquí llamarías a una API o base de datos.
+        // En un caso real, aquí llamaríamos a una API o base de datos.
         // Aquí simulamos la carga de datos del repositorio.
         loadProducts()
     }
 
     // 3. Lógica para cargar datos
     private fun loadProducts() {
-        // Podemos simular un pequeño retraso si quisiéramos mostrar un ProgressBar
+        // Aqui podriamos simular un pequeño retraso si quisiéramos mostrar un ProgressBar
         val loadedProducts = ProductRepo.getAllProducts()
 
         // 4. Actualizar el estado (hacer que la UI se recomponga automáticamente)
