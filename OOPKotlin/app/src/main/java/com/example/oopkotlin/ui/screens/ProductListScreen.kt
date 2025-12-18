@@ -1,8 +1,6 @@
 package com.example.oopkotlin.ui.screens
 
 import androidx.compose.foundation.layout.Box
-import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.compose.runtime.collectAsState
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -44,7 +42,7 @@ fun ProductListScreen(navController: NavHostController, products: List<Product>)
         ) {
             // items(products): Genera un ítem por cada producto en la lista
             items(products, key = { it.id }) { product ->
-                // añado padding para que ocupe un poco mas de espacio en pantalla
+                // Añado padding para que ocupe un poco mas de espacio en pantalla
                 Box(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)){
                 ProductListItem(product = product) { productId ->
                     // Acción de navegación al hacer clic

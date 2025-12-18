@@ -35,7 +35,7 @@ class ProductViewModel : ViewModel() {
 
     // Opcional: Lógica de negocio (ej. simular añadir al carrito)
     fun addToCart(productId: Int) {
-        // En una app real, actualizarías el estado del carrito aquí.
+        // En una app real, actualizaríamos el estado del carrito aquí.
         Log.d("ViewModel", "Producto ID $productId gestionado por ViewModel.")
     }
 }
